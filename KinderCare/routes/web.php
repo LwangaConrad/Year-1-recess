@@ -22,3 +22,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('redirects', 'App\Http\Controllers\HomeController@index');
+
+Route::resource(name:'assign', controller:\App\Http\Controllers\AssignController::class);
+
+Route::resource(name:'enroll', controller:\App\Http\Controllers\EnrollController::class);
+
+Route::resource(name:'deactivate', controller:\App\Http\Controllers\DeactivateController::class);
+
+Route::resource(name:'comment', controller:\App\Http\Controllers\CommentController::class);
+
+Route::resource(name:'reports', controller:\App\Http\Controllers\ReportsController::class);
